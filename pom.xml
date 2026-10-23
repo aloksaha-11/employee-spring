@@ -33,7 +33,7 @@
 
     <dependencies>
         <!-- Servlet API: supplied by the container at runtime -->
-<dependency>
+        <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
             <version>${jakarta-servlet-api.version}</version>
@@ -45,6 +45,15 @@
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <version>${mysql-connector-j.version}</version>
+        </dependency>
+
+        <!-- Apache commons -->
+
+        <!--Source: https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
+        <dependency>
+        <groupId>commons-dbcp</groupId>
+        <artifactId>commons-dbcp</artifactId>
+        <version>1.4</version>
         </dependency>
         
         <dependency>
@@ -92,6 +101,25 @@
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
         <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-tx</artifactId>
+        <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-orm</artifactId>
+        <version>${spring.version}</version>
+        </dependency>
+
+        <!-- Database related stuff-->
+        <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-core</artifactId>
+         <version>$(hibernate.version)</version>
         </dependency>
 
         <!-- Thymeleaf view rendering for Spring MVC -->

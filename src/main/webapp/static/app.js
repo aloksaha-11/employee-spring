@@ -4,7 +4,7 @@ function addEmployee(event) {
   var json = toJson($form);
 
   $.ajax({
-    url: "./api",
+    url: getEmployeeApiUrl(),
     type: "POST",
     data: json,
     contentType: "application/json",
@@ -22,7 +22,7 @@ function addEmployee(event) {
 
 function getEmployeeList() {
   $.ajax({
-    url: "./api",
+    url: getEmployeeApiUrl(),
     type: "GET",
     success: function (data) {
       console.log("Employee data fetched");
@@ -37,7 +37,7 @@ function getEmployeeList() {
 
 function deleteEmployee(id) {
   $.ajax({
-    url: "./api?id=" + id,
+    url: getEmployeeApiUrl() + "/" + encodeURIComponent(id),
     type: "DELETE",
     success: function (data) {
       console.log("Employee deleted");
@@ -46,6 +46,10 @@ function deleteEmployee(id) {
       alert("An error has occurred");
     },
   });
+}
+
+function getEmployeeApiUrl() {
+  return $("body").attr("data-employee-api");
 }
 
 function displayEmployeeList(data) {

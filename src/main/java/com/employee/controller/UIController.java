@@ -1,6 +1,8 @@
 package com.employee.controller;
 
+import com.employee.model.InfoData;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
@@ -12,18 +14,26 @@ public class UIController {
     }
 
     @GetMapping({"/ui/home", "/ui/home.html"})
-    public String home() {
-        return "forward:/html/home.html";
+    public ModelAndView home() {
+        return mav("home");
     }
 
     @GetMapping({"/ui/features", "/ui/features.html"})
-    public String features() {
-        return "forward:/html/features.html";
+    public ModelAndView features() {
+        return mav ("features");
     }
 
     @GetMapping({"/ui/pricing", "/ui/pricing.html"})
-    public String pricing() {
-        return "forward:/html/pricing.html";
+    public ModelAndView pricing() {
+        return mav("pricing");
     }
+
+    private static ModelAndView mav(String page) {
+        ModelAndView mav = new ModelAndView(page);
+        mav.addObject("Info", new InfoData());
+        return mav;
+    }
+
+
 
 }

@@ -2,8 +2,8 @@ com\employee\pojo\EmployeePojo.class
 com\employee\model\AboutApp.class
 com\employee\spring\ControllerConfig.class
 com\employee\controller\AboutAppController.class
+com\employee\model\InfoData.class
 com\employee\service\EmployeeService.class
-com\employee\controller\UIController.class
 com\employee\model\EmployeeData.class
 com\employee\service\EmployeeService1.class
 com\employee\model\EmployeeForm.class

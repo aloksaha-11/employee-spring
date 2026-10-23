@@ -1,9 +1,14 @@
 package com.employee.pojo;
 
-public class EmployeePojo {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
+public class EmployeePojo {
+    @Id
     private int id;
     private String name;
+    private int age;
 
     public int getId() {
         return id;
@@ -28,7 +33,5 @@ public class EmployeePojo {
     public void setAge(int age) {
         this.age = age;
     }
-
-    private int age;
 
 }

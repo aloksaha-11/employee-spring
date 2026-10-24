@@ -1,3 +1,8 @@
+function getEmployeeUrl() {
+  var baseUrl = $("meta[name=baseUrl]").attr("content");
+  return baseUrl + "/api/employee";
+}
+
 function addEmployee(event) {
   //event.preventDefault();
   var $form = $("#employee-form");

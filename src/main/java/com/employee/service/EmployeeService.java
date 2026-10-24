@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import com.employee.dao.EmployeeDao;
 import com.employee.pojo.EmployeePojo;
 
@@ -30,11 +31,15 @@ public class EmployeeService {
     public List<EmployeePojo> getAll() {
         return dao.selectAll();
     }
-
+    
+    @Transactional(rollbackFor = ApiException.class)
     public void update(int id, EmployeePojo p) throws ApiException {
      normalize(p);
-     getCheck(id);
-     dao.update(id, p); 
+     EmployeePojo ex = getCheck(id);
+     ex.setAge(p.getAge());
+     ex.setName(p.getName());
+     /* getCheck(id); */
+     dao.update(ex);
     }
 
     public EmployeePojo getCheck(int id) throws ApiException {

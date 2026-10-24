@@ -69,6 +69,7 @@ public class EmployeeController {
 
     private static EmployeeData convert(EmployeePojo p) {
         EmployeeData d = new EmployeeData();
+        d.setId(p.getId());
         d.setAge(p.getAge());
         d.setName(p.getName());
         return d;

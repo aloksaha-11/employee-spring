@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.employee.pojo.EmployeePojo;
 
 @Repository
-public class EmployeeDao {
+public class EmployeeInMemDao {
     private HashMap<Integer, EmployeePojo> rows;
     private int lastId;
     

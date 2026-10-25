@@ -50,7 +50,7 @@ public class EmployeeService {
         return p;
     }
 
-    private static void normalize(EmployeePojo p) {
+    public static void normalize(EmployeePojo p) {
         p.setName(p.getName().toLowerCase().trim());
     }
 }

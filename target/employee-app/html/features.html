@@ -1,0 +1,250 @@
+Features HTML page
+<!doctype html>
+
+<html lang="en">
+  <head th:replace="~{fragments :: name_head}"></head>
+
+  <body>
+    <nav th:replace="~{fragments :: name_navbar}"></nav>
+
+    <div class="container">
+      <div class="row">Features page</div>
+    </div>
+
+    <div th:replace="~{snippets :: name_footer}">Copyright Increff 2019</div>
+
+    <!--<div class="container">
+      <div class="row">
+        <div class="col">
+          <h1></h1>
+        </div>
+      </div>
+      Row end
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <form method="POST" action="./api">
+          ID <input name="id" /> <br />
+          <br />
+          Name <input name="name" /> <br />
+          <br />
+          Age <input name="age" /> <br />
+          <br />
+          <button type="submit">Submit</button> <br />
+          <br />
+        </form>
+      </div>
+    </div>
+    <div class="row">
+          <div class="col">
+            <h2>View All Employees</h2>
+            <a href="./api">View all Employees</a> <br />
+          </div>
+        </div>
+        
+
+        <div class="row">
+          <div class="col">
+            <h2>View All Employees</h2>
+            <a href="./api">View all Employees</a> <br />
+            <br />
+          </div>
+        </div> -->
+
+    <!-- <div class="row">
+          <div class="col">
+            <h2>View An Employee</h2>
+            <br />
+            <form method="GET" action="./api">
+              <div class="form-group row">
+                <label for="inputID" class="col-sm-2 col-form-label">ID</label>
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputID"
+                    placeholder="enter id"
+                  />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <form method="GET" action="./api">
+              ID <input name="id" /> <br />
+              <br />
+              <button type="submit">Submit</button> <br />
+              <br />
+            </form>
+          </div>
+        </div> 
+
+    <div class="row">
+      <div class="col">
+        <h2>Add Employee</h2>
+        <br />
+        <form class="form-inline" id="employee-form" method="POST" action="./api">
+          <div class="row g-3 align-items-center">
+            ID
+            <div class="col-auto">
+              <label for="inputID" class="col-form-label">ID</label>
+            </div>
+            <div class="col-auto">
+              <input
+                type="text"
+                class="form-control"
+                name="id"
+                id="inputID"
+                placeholder="enter id"
+              />
+            </div>
+
+            Name 
+            <div class="col-auto">
+              <label for="inputName" class="col-form-label">Name</label>
+            </div>
+            <div class="col-auto">
+              <input
+                type="text"
+                class="form-control"
+                name="name" 
+                id="inputName"
+                placeholder="enter name"
+              />
+            </div>
+
+            <Age> 
+             <div class="col-auto">
+             <label for="inputAge" class="col-form-label">Age</label>
+            </div>
+            <div class="col-auto">
+              <input
+                type="text"
+                class="form-control"
+                name="age"
+                id="inputAge"
+                placeholder="enter age"
+              />
+            </div>
+
+            <Submit Button>
+            <div class="col-auto">
+              <button type="button" class="btn btn-primary" id="add-employee">Add</button>
+              &nbsp;
+              <button type="button" class="btn btn-primary" id="refresh-data">Refresh</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">&nbsp;</div>
+
+    <<form method="POST" action="./api">
+              ID <input name="id" /> <br />
+              <br />
+              Name <input name="name" /> <br />
+              Age <input name="age" /> <br /> 
+
+    < <div class="row">
+          <div class="col">
+            <h2>Delete An Employee</h2>
+            <br />
+            <form>
+              <div class="form-group row">
+                <label for="inputID" class="col-sm-2 col-form-label">ID</label>
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputID"
+                    placeholder="enter id"
+                  />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <form method="GET" action="./api">
+              ID <input name="id" /> <br />
+              <br />
+              <input type="hidden" name="action" value="delete" />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div> -->
+
+    <!-- <h2>Add Employee</h2>
+
+    <form method="POST" action="./api">
+      ID <input name="id" /> <br />
+      Name <input name="name" /> <br />
+      Age <input name="age" /> <br />
+      <button type="submit">Submit</button>
+    </form>
+    <br />
+
+    <h2>View All Employees</h2>
+    <a href="./api">View All Employees</a>
+
+    <h2>View An Employee</h2>
+    <form method="GET" action="./api">
+      ID <input name="id" /> <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Delete An Employee</h2>
+    <form method="GET" action="./api">
+      ID <input name="id" /> <br />
+      <input type="hidden" name="action" value="delete" />
+      <button type="submit">Submit</button>
+    </form>
+      </div> 
+      
+    </div> 
+
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-striped" id="employee-table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>1</td>
+              <td>Alok</td>
+              <td>46</td>
+              <td>Edit | Delete</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>2</td>
+              <td>Ajay</td>
+              <td>47</td>
+              <td>Edit | Delete</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>3</td>
+              <td>Anup</td>
+              <td>45</td>
+              <td>Edit | Delete</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../static/app.js"></script> -->
+  </body>
+</html>
